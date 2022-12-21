@@ -1,0 +1,23 @@
+[
+    {
+        "model": "collections_app.collection",
+        "pk": 1,
+        "fields": {
+            "title": "Flutter"
+        }
+    },
+    {
+        "model": "collections_app.collection",
+        "pk": 2,
+        "fields": {
+            "title": "CSS"
+        }
+    },
+    {
+        "model": "collections_app.collection",
+        "pk": 3,
+        "fields": {
+            "title": "Pandas"
+        }
+    }
+]

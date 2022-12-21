@@ -1,0 +1,83 @@
+[
+    {
+        "model": "cards_app.card",
+        "pk": 1,
+        "fields": {
+            "word": "What is Flutter?",
+            "definition": "Flutter is an open-source UI software development kit created by Google. It is used to develop cross platform applications for Android, iOS, Linux, macOS, Windows, Google Fuchsia, and the web from a single codebase.",
+            "collection": 1
+        }
+    },
+    {
+        "model": "cards_app.card",
+        "pk": 2,
+        "fields": {
+            "word": "What is Dart ?",
+            "definition": "Dart is a programming language designed for client development, such as for the web and mobile apps.",
+            "collection": 1
+        }
+    },
+    {
+        "model": "cards_app.card",
+        "pk": 3,
+        "fields": {
+            "word": "What is a widget?",
+            "definition": "Widgets are the central class hierarchy in the Flutter framework. A widget is an immutable description of part of a user interface.",
+            "collection": 1
+        }
+    },
+    {
+        "model": "cards_app.card",
+        "pk": 4,
+        "fields": {
+            "word": "What is CSS?",
+            "definition": "Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.",
+            "collection": 2
+        }
+    },
+    {
+        "model": "cards_app.card",
+        "pk": 5,
+        "fields": {
+            "word": "What is a class?",
+            "definition": "A CSS class is an attribute used to define a group of HTML elements in order to apply unique styling and formatting to those elements with CSS.",
+            "collection": 2
+        }
+    },
+    {
+        "model": "cards_app.card",
+        "pk": 6,
+        "fields": {
+            "word": "Id vs Class",
+            "definition": "While an ID is specific to a single element, classes can be assigned to multiple elements on a page or throughout the website.",
+            "collection": 2
+        }
+    },
+    {
+        "model": "cards_app.card",
+        "pk": 7,
+        "fields": {
+            "word": "What is Pandas?",
+            "definition": "Pandas is a software library written for the Python programming language for data manipulation and analysis.",
+            "collection": 3
+        }
+    },
+    {
+        "model": "cards_app.card",
+        "pk": 8,
+        "fields": {
+            "word": "Pandas DataFrame",
+            "definition": "DataFrame is a 2-dimensional labeled data structure with columns of potentially different types.",
+            "collection": 3
+        }
+    },
+    {
+        "model": "cards_app.card",
+        "pk": 9,
+        "fields": {
+            "word": "Why use \"read_csv\"?",
+            "definition": "To access data from the CSV file, we require a function read_csv() that retrieves data in the form of the Dataframe.",
+            "collection": 3
+        }
+    }
+]
