@@ -1,0 +1,18 @@
+.Sidebar {
+  height: 100%;
+  width: 300px;
+  background-color: #E3E8ED;
+}
+
+.Sidebar-header {
+  font-family: 'DIN Next', sans-serif;
+  font-size: 17px;
+  font-style: italic;
+  color: #293845 ;
+  line-height: 24px;
+  background-color: #F2F5F7;
+  text-decoration: none solid #293845;
+  word-spacing: 0px;
+  margin-top: -22px;
+  padding: 30px 20px 20px 50px;
+}

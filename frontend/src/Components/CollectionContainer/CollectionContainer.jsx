@@ -1,7 +1,12 @@
-const CollectionContainer = () => {
-  return ( 
+// import React from 'react';
+
+// const CollectionContainer = (props) => {
+
+//   const {collectionId} = props;
+
+//   return ( 
     
-   );
-}
+//    );
+// }
  
-export default CollectionContainer;
+// export default CollectionContainer;
