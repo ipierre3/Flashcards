@@ -9,21 +9,19 @@
 }
 
 .logoContainer{
-  width: 100%;
+  width: 97.4%;
   height: 7.5vh;
   font-size: 32px;
   font-family: DIN Next, sans-serif;
   font-weight: 600;
-  color: rgb(105, 97, 97);
+  color: #293845;
   padding: 35px 20px 0px 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: #E3E8ED;
   text-transform: uppercase;
-  letter-spacing: 7px;
+  letter-spacing: 5px;
   transform: scale(1, 0.9);
-  display: flex;
-  flex-direction: row;
   z-index: 1;
 }

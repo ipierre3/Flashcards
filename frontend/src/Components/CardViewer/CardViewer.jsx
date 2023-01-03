@@ -26,10 +26,6 @@ const CardViewer = (props) => {
 }
   return ( 
     <div>
-      {/* <div>
-        <Card /  Due to component hierarchy, should I render the Card component here in the CardViewer component 
-        or should I keep it in App.js as it is now>
-      </div> */}
       <form onSubmit={handleSubmit} className='form-spacing'>
         <div className='form-row'>
           <div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./Components/Header/Header";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import CardViewer from "./Components/CardViewer/CardViewer";
+import CardContainer from "./Components/CardContainer/CardContainer";
 import Card from "./Components/Card/Card";
 import axios from "axios";
 import './App.css'
@@ -9,7 +10,7 @@ import './App.css'
 function App() {
   
   const [collections, setCollections] = useState([]);
-  const [card, setCard] = useState();
+  const [cards, setCards] = useState();
   const [selectedCollectionId, setSelectedCollectionId] = useState(null);
 
   async function getAllCollections(){
@@ -21,9 +22,10 @@ function App() {
     getAllCollections();
   }, []);
 
+
   async function getCards(cpk){
     let response = await axios.get('http://127.0.0.1:8000/api/collections/' + cpk + '/cards/');
-    setCard(response.data);
+    setCards(response.data);
   }
 
   async function createNewCard(cpk, newCard) {
@@ -49,9 +51,11 @@ function App() {
 
   return (
     <div className="App">
+      {console.log(cards)}
       <Header/>
-      <Sidebar collections = {collections} selectedCollectionId={selectedCollectionId} setSelectedCollectionId={setSelectedCollectionId}/>
-      <CardViewer card = {card} getCards = {getCards} createNewCard = {createNewCard} editCard={editCard} />
+      <Sidebar collections = {collections} setSelectedCollectionId={setSelectedCollectionId} getCards={getCards}/>
+      <CardContainer />
+      <CardViewer cards = {cards} getCards = {getCards} createNewCard = {createNewCard} editCard={editCard}/>
       <Card question = 'question' definition='definition' deleteCard = {deleteCard} />
     </div>
   );

@@ -5,7 +5,7 @@
 }
 
 .Sidebar-header {
-  font-family: 'DIN Next', sans-serif;
+  font-family: DIN Next, sans-serif;
   font-size: 17px;
   font-style: italic;
   color: #293845 ;
@@ -15,4 +15,29 @@
   word-spacing: 0px;
   margin-top: -22px;
   padding: 30px 20px 20px 50px;
+}
+
+.Sidebar-button {
+  color: black;
+  padding: 60px 10px -15px;
+  height: 100px;
+  width: 300px;
+  font-family: DIN Next, sans-serif;
+  text-align: center;
+  border: none;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: #E3E8ED;
+  font-size: 40px;
+  font-weight: 750;
+  transition-duration: 0.4s;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.Sidebar-button:hover {
+  background-color: #FFFFFF;
+  border: 1px solid #C3CFD9;
+  color: #E8833A;
 }
