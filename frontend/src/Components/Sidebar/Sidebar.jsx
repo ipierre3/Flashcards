@@ -2,19 +2,21 @@ import './SideBar.css'
 
 const Sidebar = (props) => {
 
+  function handleClick(collection) {
+    props.setSelectedCollectionId(collection.id);
+    props.getCards(collection.id);
+  }
+
 
   return ( 
     <div className="Sidebar">
       <div className="Sidebar-header">
         <h2>COLLECTIONS</h2>
       </div>
-      <div className="Sidebar">
+      <div>
         {props.collections.map(collection => (
           <div className="Sidebar-item" key={collection.id}>
-            <button className='Sidebar-button' onClick={() => {
-              props.setSelectedCollectionId(collection.id)
-              props.getCards(collection.id)
-            }}>{collection.title}</button>
+            <button className='Sidebar-button' onClick={() => handleClick(collection)}>{collection.title}</button>
           </div>
         ))}
       </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Card.css'
 
 const Card = ({frontSide, backSide}) => {
   const [text, setText] = useState(frontSide);
@@ -15,7 +16,7 @@ const Card = ({frontSide, backSide}) => {
 
   return ( 
     <div className='flash-card' onClick={handleClick}>
-      {text}
+      {frontSide}
     </div>
    );
 }

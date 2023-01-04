@@ -1,11 +1,12 @@
-import CardViewer from "../CardViewer/CardViewer";
+// // import CardViewer from "../CardViewer/CardViewer";
 
-const CardContainer = (props) => {
-  return ( 
-    <div>
-      <CardViewer />
-    </div>
-   );
-}
+// const CardContainer = (props) => {
+
+//   return ( 
+//     <div>
+      
+//     </div>
+//    );
+// }
  
-export default CardContainer;
+// export default CardContainer;

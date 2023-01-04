@@ -2,6 +2,7 @@
   width: 100%;
   height: 7.5vh;
   margin-bottom: -5px;
+  border-radius: 10px 10px 0px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -9,7 +10,7 @@
 }
 
 .logoContainer{
-  width: 97.4%;
+  width: 97.3%;
   height: 7.5vh;
   font-size: 32px;
   font-family: DIN Next, sans-serif;

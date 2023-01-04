@@ -1,4 +1,15 @@
-.form-row {
+.card-viewer-container{
+  width: 84%;
+  height: 113.1%;
+  margin-bottom: -5px;
+  margin-left: 300px;
+  margin-top: -957px;
+  border-top: 2px solid #9EADBA;
+  border-left: 2px solid #9EADBA;
+  background-color: #FFFFFF;
+}
+
+/* .form-row {
   display: flex;
   justify-content: center;
   margin: 0.5rem 1rem;
@@ -7,18 +18,26 @@
 .form-spacing {
   margin-top: 1rem;
   margin-bottom: 3rem;
-}
+} */
 
-.button {
-  color: white;
+.add-card-button {
+  color: #E8833A;
+  background-color: white;
   padding: 20px 25px;
+  border: 1.5px solid #E8833A;
   border-radius: 4px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  display: block;
   font-size: 24px;
-  margin: 100px;
+  font-weight: 600;
+  margin: 20px;
+  float: right;
   cursor: pointer;
+}
+
+.add-card-button:hover {
+  background-color: #E8833A;
+  color: white;
 }
 
 .button1 {
@@ -46,7 +65,3 @@
   color: #E8833A;
 }
 
-.button3:hover {
-  background-color: #E8833A;
-  color: white;
-}
