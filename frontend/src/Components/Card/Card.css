@@ -14,8 +14,9 @@
 
 .span-text {
   display: flex;
-  text-align: center;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
 
 }
