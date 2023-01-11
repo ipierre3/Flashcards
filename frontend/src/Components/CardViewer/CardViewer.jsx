@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
+import ModalForm from '../ModalForm/ModalForm'
 import Card from '../Card/Card';
 import './CardViewer.css';
 
 
 const CardViewer = (props) => {
-  const [word, setWord] = useState('');
-  const [definition, setDefinition] = useState('');
   const [index, setIndex] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+  
   
   function handlePrev() {
     if (index > 0) {
@@ -20,24 +21,15 @@ const CardViewer = (props) => {
     }
   }
   
-  function handleSubmit(event){
-    event.preventDefault();
-    
-    let newCard = {
-        word: word,
-        definition: definition
-    }
-    props.createNewCard(newCard);
-
-    setWord("");
-    setDefinition("");
-  }
-  
   return ( 
     <div className='card-viewer-container'>
       <div>
-        <button onSubmit={handleSubmit} className = "add-card-button" type = "submit"> Add Card </button>
+        <button onClick={() => setShowModal(true)} className = "add-card-button-modal" type = "submit"> Add Card </button>
       </div>
+      <div>
+      {showModal && <ModalForm selectedCollectionId = {props.selectedCollectionId} createNewCard = {props.createNewCard} showModal = {showModal} setShowModal = {setShowModal} />}
+      </div>
+
       {props.cards.length > 0 &&
         <Card frontSide={props.cards[index].word} backSide={props.cards[index].definition} editCard={props.editCard} deleteCard = {props.deleteCard} />
       }
@@ -49,9 +41,19 @@ const CardViewer = (props) => {
  
 export default CardViewer;
 
-      // <Card question = 'question' definition='definition' editCard={props.editCard} deleteCard = {props.deleteCard} />
-      // <button className = "prevBtn" type = "submit"> PREV </button>
-      // <button className = "nextBtn" type = "submit"> NEXT </button>
+  // function handleClick(event){
+  //   setShowModal(true);
+  //   event.preventDefault();
+    
+  //   let newCard = {
+  //       word: word,
+  //       definition: definition
+  //   }
+  //   props.createNewCard(newCard);
+
+  //   setWord("");
+  //   setDefinition("");
+  // }
 
           /* <div>
         <form onSubmit={handleSubmit} className='form-spacing'>

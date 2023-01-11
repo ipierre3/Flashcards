@@ -17,7 +17,7 @@ const Card = ({frontSide, backSide}) => {
         return frontSide;
       }
     }); 
-    }
+  }
 
   return ( 
     <div className='flash-card' onClick={() => handleClick()}>

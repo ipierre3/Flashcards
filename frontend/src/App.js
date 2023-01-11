@@ -26,8 +26,8 @@ function App() {
     setCards(response.data);
   }
 
-  async function createNewCard(cpk, newCard) {
-    let response = await axios.post('http://127.0.0.1:8000/api/collections/' + cpk + '/cards/', newCard)
+  async function createNewCard(formData) {
+    let response = await axios.post('http://127.0.0.1:8000/api/collections/' + selectedCollectionId + '/cards/', formData)
     if (response.status === 201) {
       await getCards();
     }
@@ -51,7 +51,7 @@ function App() {
     <div>
       <Header/>
       <Sidebar collections = {collections} setSelectedCollectionId={setSelectedCollectionId} getCards={getCards}/>
-      <CardViewer cards = {cards} getCards = {getCards} createNewCard = {createNewCard} editCard={editCard} deleteCard = {deleteCard} />
+      <CardViewer cards = {cards} selectedCollectionId = {selectedCollectionId} getCards = {getCards} createNewCard = {createNewCard} editCard={editCard} deleteCard = {deleteCard} />
     </div>
   );
 }

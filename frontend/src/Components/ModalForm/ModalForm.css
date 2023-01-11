@@ -1,0 +1,43 @@
+.modal-form {
+  font-size: 50px;
+  font-family: sans-serif;
+  width: 900px;
+  margin-left: 330px;
+  margin-top: 200px;
+  border: none;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  user-select: none;
+  height: 10em;
+  position: relative;
+}
+
+.saveBtn {
+  background-color: #E8833A;
+  transition-duration: 0.2s;
+  border-radius: 4px;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 20px 25px;
+  margin: 20px 50px;
+  cursor: pointer;
+  color: white; 
+  border: none;
+}
+
+.saveBtn:hover {
+  background-color: #FFFFFF;
+  border: 2px solid #E8833A;
+  color: #E8833A;
+}
+
+.input-box {
+  width: 65%;
+  padding: 20px 15px;
+  font-size: 25px;
+  margin: 25px 50px;
+  display: inline-block;
+  border: 2px solid #C5CED6;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

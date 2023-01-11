@@ -9,7 +9,7 @@
   background-color: #FFFFFF;
 }
 
-.add-card-button {
+.add-card-button-modal {
   color: #E8833A;
   background-color: white;
   padding: 20px 25px;
@@ -25,7 +25,7 @@
   cursor: pointer;
 }
 
-.add-card-button:hover {
+.add-card-button-modal:hover {
   background-color: #E8833A;
   color: white;
 }
@@ -38,8 +38,15 @@
   font-weight: 600;
   padding: 20px 25px;
   margin: 20px 50px 0px 580px;
+  cursor: pointer;
   color: white; 
   border: none;
+}
+
+.prevBtn:hover {
+  background-color: #FFFFFF;
+  border: 2px solid #E8833A;
+  color: #E8833A;
 }
 
 .nextBtn {
@@ -52,6 +59,7 @@
   margin: 80px;
   margin-left: 140px;
   padding: 20px 25px;
+  cursor: pointer;
   border: none;
 }
 
@@ -61,11 +69,7 @@
   color: #E8833A;
 }
 
-.prevBtn:hover {
-  background-color: #FFFFFF;
-  border: 2px solid #E8833A;
-  color: #E8833A;
-}
+
 
 
 /* .form-row {
