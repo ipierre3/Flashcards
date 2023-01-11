@@ -5,11 +5,21 @@ import './CardViewer.css';
 
 const CardViewer = (props) => {
   const [word, setWord] = useState('');
-  const [definition, setDefinition] = useState('')
+  const [definition, setDefinition] = useState('');
+  const [index, setIndex] = useState(0);
   
-  
-  ;
+  function handlePrev() {
+    if (index > 0) {
+      setIndex(index - 1);
+    }
+  }
 
+  function handleNext() {
+    if (index < props.cards.length - 1) {
+      setIndex(index + 1);
+    }
+  }
+  
   function handleSubmit(event){
     event.preventDefault();
     
@@ -25,13 +35,14 @@ const CardViewer = (props) => {
   
   return ( 
     <div className='card-viewer-container'>
-      <div onSubmit={handleSubmit}>
-        <button className = "add-card-button" type = "submit"> Add Card </button>
+      <div>
+        <button onSubmit={handleSubmit} className = "add-card-button" type = "submit"> Add Card </button>
       </div>
       {props.cards.length > 0 &&
-        <Card frontSide={props.cards[0].word} backSide={props.cards[0].definition} editCard={props.editCard} deleteCard = {props.deleteCard} />
+        <Card frontSide={props.cards[index].word} backSide={props.cards[index].definition} editCard={props.editCard} deleteCard = {props.deleteCard} />
       }
-        
+      <button onClick={handlePrev} className = "prevBtn" type = "submit"> Prev </button>
+      <button onClick={handleNext} className = "nextBtn" type = "submit"> Next </button>
     </div>
    );
 }

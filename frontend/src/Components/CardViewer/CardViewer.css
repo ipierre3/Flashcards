@@ -9,22 +9,12 @@
   background-color: #FFFFFF;
 }
 
-/* .form-row {
-  display: flex;
-  justify-content: center;
-  margin: 0.5rem 1rem;
-}
-
-.form-spacing {
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-} */
-
 .add-card-button {
   color: #E8833A;
   background-color: white;
   padding: 20px 25px;
   border: 1.5px solid #E8833A;
+  transition-duration: 0.2s;
   border-radius: 4px;
   text-align: center;
   display: block;
@@ -40,28 +30,50 @@
   color: white;
 }
 
-.button1 {
-  background-color: #E8833A; 
+.prevBtn {
+  background-color: #E8833A;
+  transition-duration: 0.2s;
+  border-radius: 4px;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 20px 25px;
+  margin: 20px 30px;
   color: white; 
   border: none;
 }
 
-.button2 {
-  background-color: #E8833A; 
+.nextBtn {
+  background-color: #E8833A;
+  transition-duration: 0.2s;
+  border-radius: 4px;
+  font-size: 24px;
+  font-weight: 600;
   color: white; 
+  margin: 80px;
+  padding: 20px 25px;
   border: none;
 }
 
-.button3 {
-  background-color: #FFFFFF; 
-  color: #E8833A; 
-  border: 2px solid #E8833A;
-  float: right;
-}
-
-.button:hover {
+.nextBtn:hover {
   background-color: #FFFFFF;
   border: 2px solid #E8833A;
   color: #E8833A;
 }
 
+.prevBtn:hover {
+  background-color: #FFFFFF;
+  border: 2px solid #E8833A;
+  color: #E8833A;
+}
+
+
+/* .form-row {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 1rem;
+}
+
+.form-spacing {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+} */

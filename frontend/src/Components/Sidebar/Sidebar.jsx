@@ -7,7 +7,6 @@ const Sidebar = (props) => {
     props.getCards(collection.id);
   }
 
-
   return ( 
     <div className="Sidebar">
       <div className="Sidebar-header">

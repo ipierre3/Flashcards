@@ -1,13 +1,21 @@
-.flash-card{
+.flash-card {
   font-size: 50px;
   font-family: sans-serif;
-  line-height: 472px;
   width: 900px;
   margin-left: 330px;
   margin-top: 200px;
   border: 2px solid #C3CFD9;
   background-color: #F2F5F7;
-  text-align: center;
   cursor: pointer;
   user-select: none;
+  height: 10em;
+  position: relative;
+}
+
+.span-text {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
 }

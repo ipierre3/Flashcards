@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Card.css'
 
 const Card = ({frontSide, backSide}) => {
+
   const [text, setText] = useState(frontSide);
 
+  useEffect(() => {
+    setText(frontSide)
+  }, [frontSide, backSide])
+
   function handleClick() {
-    setText(question => {
-      if(question === frontSide) {
+    setText(prevState => {
+      if(prevState === frontSide) {
         return backSide;
       } else {
         return frontSide;
@@ -15,8 +20,8 @@ const Card = ({frontSide, backSide}) => {
     }
 
   return ( 
-    <div className='flash-card' onClick={handleClick}>
-      {frontSide}
+    <div className='flash-card' onClick={() => handleClick()}>
+      <span className='span-text'>{text}</span>
     </div>
    );
 }

@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import Header from "./Components/Header/Header";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import CardViewer from "./Components/CardViewer/CardViewer";
-// import CardContainer from "./Components/CardContainer/CardContainer";
-// import Card from "./Components/Card/Card";
 import axios from "axios";
 import './App.css'
 
@@ -20,6 +18,7 @@ function App() {
 
   useEffect(() => {
     getAllCollections();
+    getCards(1);
   }, []);
 
   async function getCards(cpk){
@@ -50,7 +49,6 @@ function App() {
 
   return (
     <div>
-      {console.log(cards)}
       <Header/>
       <Sidebar collections = {collections} setSelectedCollectionId={setSelectedCollectionId} getCards={getCards}/>
       <CardViewer cards = {cards} getCards = {getCards} createNewCard = {createNewCard} editCard={editCard} deleteCard = {deleteCard} />
@@ -59,5 +57,3 @@ function App() {
 }
 
 export default App;
-
-// {/* <Card question = 'question' definition='definition' deleteCard = {deleteCard} /> */}
