@@ -11,11 +11,25 @@
   height: 10em;
   position: relative;
 }
+
+.delete-icon {
+  position: absolute;
+  transform: translate(800px, 10px);
+  font-size: px;
+}
+
+.edit-icon {
+  position: absolute;
+  transform: translate(0px, 10px);
+  font-size: px;
+}
+
 .count-position {
   font-family: sans-serif;
   position: absolute;
   transform: translate(410px, 10px);
 }
+
 .span-text {
   display: flex;
   align-items: center;
