@@ -11,7 +11,11 @@
   height: 10em;
   position: relative;
 }
-
+.count-position {
+  font-family: sans-serif;
+  position: absolute;
+  transform: translate(410px, 10px);
+}
 .span-text {
   display: flex;
   align-items: center;

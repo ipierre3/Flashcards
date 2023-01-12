@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Card.css'
 
-const Card = ({frontSide, backSide}) => {
+const Card = ({activeCard, totalCards, frontSide, backSide}) => {
 
   const [text, setText] = useState(frontSide);
 
@@ -21,6 +21,7 @@ const Card = ({frontSide, backSide}) => {
 
   return ( 
     <div className='flash-card' onClick={() => handleClick()}>
+      <span className='count-position'>{activeCard}/{totalCards}</span>
       <span className='span-text'>{text}</span>
     </div>
    );

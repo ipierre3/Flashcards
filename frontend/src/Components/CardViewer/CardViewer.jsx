@@ -9,6 +9,8 @@ const CardViewer = (props) => {
   const [showModal, setShowModal] = useState(false);
   const [activeCard, setActiveCard] = useState(1);
   
+  const totalCards = props.cards.length;
+
   function handlePrev() {
     if (index > 0 && activeCard > 0) {
       setIndex(index - 1);
@@ -22,15 +24,11 @@ const CardViewer = (props) => {
       setActiveCard(activeCard + 1);
     }
   }
-  
-  const totalCards = props.cards.length;
-  console.log(totalCards);
 
   return ( 
     <div className='card-viewer-container'>
       <div>
         <button onClick={() => setShowModal(true)} className = "add-card-button-modal" type = "submit"> Add Card </button>
-        <h1 className='count-position'>{activeCard}/{totalCards}</h1>
       </div>
       <div>
       {showModal && 
@@ -38,12 +36,12 @@ const CardViewer = (props) => {
       </div>
 
       {props.cards.length > 0 &&
-        <Card frontSide={props.cards[index].word} backSide={props.cards[index].definition} editCard={props.editCard} deleteCard = {props.deleteCard}/>
+        <Card frontSide={props.cards[index].word} backSide={props.cards[index].definition} editCard={props.editCard} deleteCard = {props.deleteCard} activeCard = {activeCard} totalCards = {totalCards} />
       }
       <button onClick={() => handlePrev()} className = "prevBtn" type = "submit"> Prev </button>
       <button onClick={() => handleNext()} className = "nextBtn" type = "submit"> Next </button>
     </div>
    );
 }
- 
+
 export default CardViewer;
