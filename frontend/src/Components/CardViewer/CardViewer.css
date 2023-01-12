@@ -1,9 +1,9 @@
 .card-viewer-container{
   width: 84%;
-  height: 113.1%;
-  margin-bottom: -5px;
+  position: absolute;
   margin-left: 300px;
-  margin-top: -957px;
+  top: 170px;
+  bottom: -155px;
   border-top: 2px solid #9EADBA;
   border-left: 2px solid #9EADBA;
   background-color: #FFFFFF;

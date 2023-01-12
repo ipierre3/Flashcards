@@ -10,6 +10,7 @@ function App() {
   const [collections, setCollections] = useState([]);
   const [cards, setCards] = useState([]);
   const [selectedCollectionId, setSelectedCollectionId] = useState(null);
+  const [activeCard, setActiveCard] = useState(null);
 
   async function getAllCollections(){
     let response = await axios.get('http://127.0.0.1:8000/api/collections/');
@@ -19,6 +20,7 @@ function App() {
   useEffect(() => {
     getAllCollections();
     getCards(1);
+    setActiveCard([0]);
   }, []);
 
   async function getCards(cpk){
@@ -51,7 +53,7 @@ function App() {
     <div>
       <Header/>
       <Sidebar collections = {collections} setSelectedCollectionId={setSelectedCollectionId} getCards={getCards}/>
-      <CardViewer cards = {cards} selectedCollectionId = {selectedCollectionId} getCards = {getCards} createNewCard = {createNewCard} editCard={editCard} deleteCard = {deleteCard} />
+      <CardViewer cards = {cards} selectedCollectionId = {selectedCollectionId} getCards = {getCards} createNewCard = {createNewCard} editCard={editCard} deleteCard = {deleteCard} activeCard = {activeCard} setActiveCard = {setActiveCard} />
     </div>
   );
 }
