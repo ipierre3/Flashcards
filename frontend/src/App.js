@@ -20,12 +20,17 @@ function App() {
   useEffect(() => {
     getAllCollections();
     getCards(1);
-    setActiveCard([0]);
+    cardNumber([0]);
   }, []);
 
   async function getCards(cpk){
     let response = await axios.get('http://127.0.0.1:8000/api/collections/' + cpk + '/cards/');
     setCards(response.data);
+  }
+
+  async function cardNumber(selectedCollectionId){
+    let response = await axios.get('http://127.0.0.1:8000/api/collections/' + selectedCollectionId + '/cards/');
+    setActiveCard(response.data);
   }
 
   async function createNewCard(formData) {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ModalForm from '../ModalForm/ModalForm'
+import ModalForm from '../ModalForm/ModalForm';
 import Card from '../Card/Card';
 import './CardViewer.css';
 
@@ -33,7 +33,7 @@ const CardViewer = (props) => {
         <Card frontSide={props.cards[index].word} backSide={props.cards[index].definition} editCard={props.editCard} deleteCard = {props.deleteCard} activeCard = {props.activeCard} setActiveCard = {props.setActiveCard} cards = {props.cards} />
       }
       <button onClick={() =>handlePrev()} className = "prevBtn" type = "submit"> Prev </button>
-      <button onClick={handleNext} className = "nextBtn" type = "submit"> Next </button>
+      <button onClick={() =>handleNext()} className = "nextBtn" type = "submit"> Next </button>
     </div>
    );
 }
@@ -53,20 +53,3 @@ export default CardViewer;
   //   setWord("");
   //   setDefinition("");
   // }
-
-          /* <div>
-        <form onSubmit={handleSubmit} className='form-spacing'>
-          <div className='form-row'>
-            <div>
-              <input type='text' placeholder='Enter title...' value={word} onChange={(event) => setWord(event.target.value)}></input>
-            </div>
-            <div>
-              <input type='text' placeholder='Enter definition' value={definition} onChange={(event) => setDefinition(event.target.value)}></input>
-            </div>
-            
-          </div>
-          <div className="form-row">
-            <button type='submit'>Save</button>
-          </div>
-        </form>
-      </div> */
