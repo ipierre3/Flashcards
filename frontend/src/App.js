@@ -10,7 +10,7 @@ function App() {
   const [collections, setCollections] = useState([]);
   const [cards, setCards] = useState([]);
   const [selectedCollectionId, setSelectedCollectionId] = useState(null);
-  const [activeCard, setActiveCard] = useState(null);
+  const [cardCount, setCardCount] = useState(0);
 
   async function getAllCollections(){
     let response = await axios.get('http://127.0.0.1:8000/api/collections/');
@@ -20,17 +20,17 @@ function App() {
   useEffect(() => {
     getAllCollections();
     getCards(1);
-    cardNumber([0]);
+    cardNumber();
   }, []);
 
-  async function getCards(cpk){
-    let response = await axios.get('http://127.0.0.1:8000/api/collections/' + cpk + '/cards/');
+  async function getCards(selectedCollectionId){
+    let response = await axios.get('http://127.0.0.1:8000/api/collections/' + selectedCollectionId + '/cards/');
     setCards(response.data);
   }
 
   async function cardNumber(selectedCollectionId){
     let response = await axios.get('http://127.0.0.1:8000/api/collections/' + selectedCollectionId + '/cards/');
-    setActiveCard(response.data);
+    setCardCount(response.data.count);
   }
 
   async function createNewCard(formData) {
@@ -58,7 +58,7 @@ function App() {
     <div>
       <Header/>
       <Sidebar collections = {collections} setSelectedCollectionId={setSelectedCollectionId} getCards={getCards}/>
-      <CardViewer cards = {cards} selectedCollectionId = {selectedCollectionId} getCards = {getCards} createNewCard = {createNewCard} editCard={editCard} deleteCard = {deleteCard} activeCard = {activeCard} setActiveCard = {setActiveCard} />
+      <CardViewer cards = {cards} selectedCollectionId = {selectedCollectionId} getCards = {getCards} createNewCard = {createNewCard} editCard={editCard} deleteCard = {deleteCard} cardCount = {cardCount} />
     </div>
   );
 }
