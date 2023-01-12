@@ -12,16 +12,20 @@
   position: relative;
 }
 
-.delete-icon {
-  position: absolute;
-  transform: translate(800px, 10px);
-  font-size: px;
-}
-
 .edit-icon {
   position: absolute;
-  transform: translate(0px, 10px);
-  font-size: px;
+  transform: translate(290px, -480px);
+  color: #E8833A;
+  user-select: none;
+  cursor: pointer;
+}
+
+.delete-icon {
+  position: absolute;
+  transform: translate(1150px, -480px);
+  color: #E8833A;
+  user-select: none;
+  cursor: pointer;
 }
 
 .count-position {

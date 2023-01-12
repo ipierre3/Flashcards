@@ -40,15 +40,15 @@ function App() {
     }
   }
 
-  async function deleteCard(cpk, cardId) {
-    let response = await axios.delete('http://127.0.0.1:8000/api/collections/' + cpk + '/cards/' + cardId + '/');
+  async function deleteCard(selectedCollectionId, cardId) {
+    let response = await axios.delete('http://127.0.0.1:8000/api/collections/' + selectedCollectionId + '/cards/' + cardId + '/');
     if (response.status === 204) {
       await getCards();
     }
   }
 
-  async function editCard(cpk, CardId, updatedCard) {
-    let response = await axios.put('http://127.0.0.1:8000/api/collections/' + cpk + '/cards/' + CardId + '/', updatedCard);
+  async function editCard(selectedCollectionId, CardId, updatedCard) {
+    let response = await axios.put('http://127.0.0.1:8000/api/collections/' + selectedCollectionId + '/cards/' + CardId + '/', updatedCard);
     if (response.status === 200) {
       await getCards();
     }
