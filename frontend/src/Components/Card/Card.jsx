@@ -4,7 +4,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import { Button } from '@material-ui/core';
 import './Card.css'
 
-const Card = ({cards, editCard, deleteCard, activeCard, totalCards, frontSide, backSide}) => {
+const Card = ({ cards, selectedCollectionId, editCard, deleteCard, activeCard, totalCards, frontSide, backSide}) => {
 
   const [text, setText] = useState(frontSide);
 
@@ -22,8 +22,8 @@ const Card = ({cards, editCard, deleteCard, activeCard, totalCards, frontSide, b
     });
   }
 
-  function handleDelete(id) {
-    deleteCard(id);
+  function handleDelete(selectedCollectionId, id) {
+    deleteCard(selectedCollectionId, id);
   }
 
   return ( 
@@ -32,7 +32,7 @@ const Card = ({cards, editCard, deleteCard, activeCard, totalCards, frontSide, b
         <span className='count-position'>{activeCard}/{totalCards}</span>
         <span className='span-text'>{text}</span>
       </div>
-      <Button onClick={() => handleDelete(cards.id)}><DeleteForeverIcon sx={{ fontSize: 60 }} className='delete-icon' /></Button>
+      <Button onClick={() => handleDelete(selectedCollectionId, cards.id)}><DeleteForeverIcon sx={{ fontSize: 60 }} className='delete-icon' /></Button>
       <Button><EditIcon sx={{ fontSize: 60 }} className='edit-icon'/></Button>
     </div>
    );

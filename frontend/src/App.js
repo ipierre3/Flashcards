@@ -47,8 +47,8 @@ function App() {
     }
   }
 
-  async function editCard(selectedCollectionId, CardId, updatedCard) {
-    let response = await axios.put('http://127.0.0.1:8000/api/collections/' + selectedCollectionId + '/cards/' + CardId + '/', updatedCard);
+  async function editCard(selectedCollectionId, cardId, updatedCard) {
+    let response = await axios.put('http://127.0.0.1:8000/api/collections/' + selectedCollectionId + '/cards/' + cardId + '/', updatedCard);
     if (response.status === 200) {
       await getCards();
     }

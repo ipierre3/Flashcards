@@ -37,7 +37,7 @@ const CardViewer = (props) => {
       </div>
 
       {props.cards.length > 0 &&
-        <Card frontSide={props.cards[index].word} backSide={props.cards[index].definition} editCard={props.editCard} deleteCard = {props.deleteCard} activeCard = {activeCard} totalCards = {totalCards} />
+        <Card frontSide={props.cards[index].word} backSide={props.cards[index].definition} editCard={props.editCard} deleteCard = {props.deleteCard} activeCard = {activeCard} totalCards = {totalCards} selectedCollectionId = {props.selectedCollectionId} cards = {props.cards} />
       }
       <button onClick={() => handlePrev()} className = "prevBtn" type = "submit"> Prev </button>
       <button onClick={() => handleNext()} className = "nextBtn" type = "submit"> Next </button>
