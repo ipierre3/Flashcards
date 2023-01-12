@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ModalForm from '../ModalForm/ModalForm';
 import Card from '../Card/Card';
-import './CardViewer.css';
+import './CardViewer.css'
 
 
 const CardViewer = (props) => {

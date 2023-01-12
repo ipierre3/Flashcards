@@ -4,7 +4,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import { Button } from '@material-ui/core';
 import './Card.css'
 
-const Card = ({ cards, selectedCollectionId, editCard, deleteCard, activeCard, totalCards, frontSide, backSide}) => {
+const Card = ({cards, selectedCollectionId, deleteCard, activeCard, totalCards, frontSide, backSide}) => {
 
   const [text, setText] = useState(frontSide);
 
@@ -39,5 +39,3 @@ const Card = ({ cards, selectedCollectionId, editCard, deleteCard, activeCard, t
 }
  
 export default Card;
-
-// onClick={() => deleteCard(cards.id)}

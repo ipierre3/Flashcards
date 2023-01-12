@@ -6,8 +6,7 @@ const ModalForm = (props) => {
  
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData);
-    // props.createNewCard(formData);
+    props.createNewCard(formData);
     props.setShowModal(false);
   }
  
